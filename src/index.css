@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 248 250 252;
+    --foreground: 30 41 59;
+    --card: 255 255 255;
+    --card-foreground: 30 41 59;
+    --popover: 255 255 255;
+    --popover-foreground: 30 41 59;
+    --primary: 79 70 229;
+    --primary-foreground: 255 255 255;
+    --secondary: 241 245 249;
+    --secondary-foreground: 30 41 59;
+    --muted: 241 245 249;
+    --muted-foreground: 71 85 105;
+    --accent: 16 185 129;
+    --accent-foreground: 255 255 255;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 226 232 240;
+    --input: 226 232 240;
+    --ring: 79 70 229;
+    --chart-1: 79 70 229;
+    --chart-2: 16 185 129;
+    --chart-3: 245 158 11;
+    --chart-4: 239 68 68;
+    --chart-5: 168 85 247;
+    --radius: 0.5rem;
+    --u360-navy: 30 58 95;
+    --u360-blue: 79 70 229;
+    --u360-gold: 245 158 11;
+    --marine-blue: 16 185 129;
+    --text-primary: 30 41 59;
+    --text-secondary: 71 85 105;
+    --text-accent: 79 70 229;
+  }
+
+  .dark {
+    --background: 15 20 25;
+    --foreground: 255 255 255;
+    --card: 30 58 95;
+    --card-foreground: 255 255 255;
+    --popover: 30 58 95;
+    --popover-foreground: 255 255 255;
+    --primary: 255 255 255;
+    --primary-foreground: 30 58 95;
+    --secondary: 51 65 85;
+    --secondary-foreground: 255 255 255;
+    --muted: 51 65 85;
+    --muted-foreground: 148 163 184;
+    --accent: 16 82 149;
+    --accent-foreground: 255 255 255;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 51 65 85;
+    --input: 51 65 85;
+    --ring: 16 82 149;
+    --chart-1: 30 58 95;
+    --chart-2: 16 185 129;
+    --chart-3: 16 82 149;
+    --chart-4: 239 68 68;
+    --chart-5: 168 85 247;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom animations for professional feel */
+@keyframes fadeInUp {
+  from {
+    opacity: 0%;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Smooth transitions for interactive elements */
+.transition-all {
+  transition: all 0.2s ease-in-out;
+}
+
+/* U360 Brand Gradients */
+.gradient-u360-primary {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+.gradient-u360-accent {
+  background: linear-gradient(135deg, #6366f1 0%, #10b981 100%);
+}
+
+.gradient-u360-hero {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #10b981 100%);
+}
+
+/* U360 Brand Colors */
+.text-u360-navy {
+  color: hsl(var(--u360-navy));
+}
+
+.bg-u360-navy {
+  background-color: hsl(var(--u360-navy));
+}
+
+.text-u360-blue {
+  color: hsl(var(--u360-blue));
+}
+
+.bg-u360-blue {
+  background-color: hsl(var(--u360-blue));
+}
+
+.text-u360-gold {
+  color: hsl(var(--u360-gold));
+}
+
+.bg-u360-gold {
+  background-color: hsl(var(--u360-gold));
+}
+
+.text-marine-blue {
+  color: hsl(var(--marine-blue));
+}
+
+.bg-marine-blue {
+  background-color: hsl(var(--marine-blue));
+}
+
+/* Enhanced Text Colors */
+.text-primary-enhanced {
+  color: hsl(var(--text-primary));
+  font-weight: 600;
+}
+
+.text-secondary-enhanced {
+  color: hsl(var(--text-secondary));
+  font-weight: 500;
+}
+
+.text-accent-enhanced {
+  color: hsl(var(--text-accent));
+  font-weight: 600;
+}
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, hsl(var(--u360-blue)), hsl(var(--marine-blue)));
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, hsl(var(--u360-gold)), #f59e0b);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* U360 Logo Styling */
+.u360-logo {
+  filter: drop-shadow(0 2px 4px rgb(0 0 0 / 10%));
+  transition: all 0.3s ease;
+}
+
+.u360-logo:hover {
+  filter: drop-shadow(0 4px 8px rgb(0 0 0 / 15%));
+  transform: scale(1.02);
+}
